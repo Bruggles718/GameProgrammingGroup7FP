@@ -464,6 +464,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 404322, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00046159799
+      objectReference: {fileID: 0}
+    - target: {fileID: 404322, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0004023536
+      objectReference: {fileID: 0}
     - target: {fileID: 430554, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -520,22 +528,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 110986, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
   m_PrefabInstance: {fileID: 1935705801}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1935705804
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935705802}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!114 &1935705805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,3 +555,37 @@ CapsuleCollider:
   m_Height: 3.2476027
   m_Direction: 1
   m_Center: {x: 0.000001823058, y: 1.6235712, z: 0.042352617}
+--- !u!114 &1935705807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935705802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad5b29f0fbea41a78149e6bcd78f514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpHeight: 10
+  gravity: 9.81
+  airControl: 10
+--- !u!143 &1935705808
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935705802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 3.25
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.6, z: 0}
