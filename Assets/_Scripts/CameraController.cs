@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraController : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
 
     GameObject player;
@@ -18,9 +18,7 @@ public class cameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!LevelManager.isGameOver && player != null) {
-            transform.position = player.transform.position + offset;
-        }
+        transform.position = player.transform.position + offset;
     }
 }
  

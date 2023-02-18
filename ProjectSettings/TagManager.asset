@@ -8,6 +8,7 @@ TagManager:
   - Pickup
   - Enemy
   - PlayerWeapon
+  - CloseWall
   layers:
   - Default
   - TransparentFX
