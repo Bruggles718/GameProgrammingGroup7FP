@@ -31,8 +31,10 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Player")) {
+            this.animator.SetBool("Death_b", true);
+            Destroy(gameObject,2);
+        }
     }
 }
