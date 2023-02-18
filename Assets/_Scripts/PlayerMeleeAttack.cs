@@ -6,17 +6,17 @@ public class PlayerMeleeAttack : MonoBehaviour
 {
     [SerializeField] private float animationLength;
     private Animator animator;
-    private Rigidbody rb;
     private float finishTime;
+    private PlayerController playerController;
 
     private bool resetAnim;
 
     // Start is called before the first frame update
     void Start()
     {
+        this.playerController = GetComponent<PlayerController>();
         
         this.animator = GetComponent<Animator>();
-        this.rb = GetComponent<Rigidbody>();
         this.finishTime = 0;
 
         this.animator.SetBool("Static_b", true);
@@ -37,6 +37,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         {
             if (this.resetAnim)
             {
+                this.playerController.enabled = true;
                 this.animator.SetBool("Static_b", true);
                 this.animator.SetInteger("WeaponType_int", 0);
                 this.animator.SetInteger("MeleeType_int", 1);
@@ -45,8 +46,8 @@ public class PlayerMeleeAttack : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1") && Time.time > this.finishTime)
         {
+            this.playerController.enabled = false;
             var mousePos = Helpers.GetMousePosition3D(new Plane(Vector3.up, this.transform.position));
-            this.rb.velocity = Vector3.zero;
             this.transform.LookAt(mousePos);
             this.animator.SetBool("Static_b", true);
             this.animator.SetFloat("Speed_f", 0);
