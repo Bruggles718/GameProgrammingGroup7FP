@@ -101,7 +101,7 @@ public class LevelGenerator : MonoBehaviour
             }
             else
             {
-                choice = Random.Range(0, roomPositions.Count);
+                choice = Random.Range(0, roomPrefabsDupe.Count);
                 roomPrefab = roomPrefabsDupe[choice];
                 roomPrefabsDupe.RemoveAt(choice);
             }
