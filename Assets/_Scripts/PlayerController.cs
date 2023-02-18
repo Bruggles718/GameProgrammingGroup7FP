@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
 
         if (controller.isGrounded)
         {
-            animator.SetBool("Grounded_b", true);
             moveDirection = input;
             if (Input.GetButton("Jump"))
             {
@@ -48,7 +47,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            animator.SetBool("Grounded_b", false);
             input.y = moveDirection.y;
             moveDirection = Vector3.Lerp(moveDirection, input, airControl * Time.deltaTime);
         }

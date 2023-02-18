@@ -10,6 +10,8 @@ public class EnemyBehavior : MonoBehaviour
 
     private Animator animator;
 
+    private bool dead = false;
+
 
     void Start()
     {
@@ -28,15 +30,21 @@ public class EnemyBehavior : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance > minDistance)
+        if (distance > minDistance && !dead)
         {
+            animator.SetFloat("Speed_f", moveSpeed);
             transform.LookAt(player);
             transform.position = Vector3.MoveTowards(transform.position, player.position, step);
+        }
+        else
+        {
+            animator.SetFloat("Speed_f", 0);
         }
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision.gameObject.CompareTag("PlayerWeapon") && this.player.GetComponent<Animator>().GetInteger("WeaponType_int") > 0) {
+            dead = true;
             this.animator.SetBool("Death_b", true);
             Destroy(gameObject,2);
         }

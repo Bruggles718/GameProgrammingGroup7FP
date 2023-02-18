@@ -10,6 +10,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     private PlayerController playerController;
 
     private bool resetAnim;
+    private bool hasMeleeWeapon = true;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +45,7 @@ public class PlayerMeleeAttack : MonoBehaviour
                 this.resetAnim = false;
             }
         }
-        if (Input.GetButtonDown("Fire1") && Time.time > this.finishTime)
+        if (Input.GetButtonDown("Fire1") && Time.time > this.finishTime && this.hasMeleeWeapon)
         {
             this.playerController.enabled = false;
             var mousePos = Helpers.GetMousePosition3D(new Plane(Vector3.up, this.transform.position));
