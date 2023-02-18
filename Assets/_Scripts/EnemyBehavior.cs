@@ -8,6 +8,8 @@ public class EnemyBehavior : MonoBehaviour
     public float moveSpeed = 5;
     public float minDistance = 2;
 
+    private Animator animator;
+
 
     void Start()
     {
@@ -15,6 +17,8 @@ public class EnemyBehavior : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
         }
+
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
