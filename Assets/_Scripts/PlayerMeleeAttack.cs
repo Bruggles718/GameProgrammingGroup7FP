@@ -43,7 +43,7 @@ public class PlayerMeleeAttack : MonoBehaviour
                 this.resetAnim = false;
             }
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && Time.time > this.finishTime)
         {
             var mousePos = Helpers.GetMousePosition3D(new Plane(Vector3.up, this.transform.position));
             this.rb.velocity = Vector3.zero;

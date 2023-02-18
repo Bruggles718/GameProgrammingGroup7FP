@@ -427,6 +427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9498ce8b485b9a04d9b780cc7d5e0c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingRoomPrefab: {fileID: 0}
+  endingRoomPrefab: {fileID: 0}
   roomPrefabs: []
   level: 1
   gridWidth: 4
