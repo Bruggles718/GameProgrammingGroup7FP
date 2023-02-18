@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class cameraController : MonoBehaviour
 {
-    GameObject player;
 
+    GameObject player;
     Vector3 offset;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,9 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + offset;
+        if (!LevelManager.isGameOver && player != null) {
+            transform.position = player.transform.position + offset;
+        }
     }
 }
+ 
