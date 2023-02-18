@@ -24,7 +24,7 @@ public class LevelGenerator : MonoBehaviour
     {
         List<Vector2> rooms = this.GenerateRoomPositions();
         if (this.startingRoomPrefab != null && this.endingRoomPrefab != null && this.roomPrefabs.Count > 0)
-        {]
+        {
             this.InstantiateRoomPrefabs(rooms);
         }
     }
