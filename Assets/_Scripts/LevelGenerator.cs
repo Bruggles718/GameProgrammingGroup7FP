@@ -80,6 +80,8 @@ public class LevelGenerator : MonoBehaviour
 
     public void InstantiateRoomPrefabs(List<Vector2> roomPositions)
     {
+        Vector3 startingRoomPosition = Vector3.zero;
+
         int totalRoomCount = roomPositions.Count;
         List<GameObject> roomPrefabsDupe = new List<GameObject>(this.roomPrefabs);
 
