@@ -159,6 +159,8 @@ MonoBehaviour:
   - {fileID: 4931846766913430636, guid: 21de9de7506f0c14bab49970a7909847, type: 3}
   - {fileID: 5538483698823006553, guid: dd04db60cb4bc1e4fb833239148bc984, type: 3}
   - {fileID: 5984536945698334654, guid: ceccd999219211848a72a4aa151c19ea, type: 3}
+  - {fileID: 474328522932304325, guid: 03a3642da58caa242b865c0ab2fe72df, type: 3}
+  - {fileID: 3037380761057271672, guid: ce426b99c4cf57e48b1a2e3ad548e6a1, type: 3}
   level: 1
   gridWidth: 4
   gridHeight: 4
@@ -254,7 +256,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115973469}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -371,17 +373,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 186596, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 196934, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 404322, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000461598
+      value: 0.00046159804
       objectReference: {fileID: 0}
     - target: {fileID: 404322, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00040235362
+      value: -0.00040235365
       objectReference: {fileID: 0}
     - target: {fileID: 430554, guid: 73908ff37f8527246b505b44088d5f62, type: 3}
       propertyPath: m_RootOrder

@@ -94,6 +94,8 @@ public class LevelGenerator : MonoBehaviour
             if (i == 0)
             {
                 roomPrefab = this.startingRoomPrefab;
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.transform.position = new Vector3(pos.x * this.roomBaseDimension, player.transform.position.y, pos.y * this.roomBaseDimension);
             }
             else if (i == totalRoomCount - 1)
             {
