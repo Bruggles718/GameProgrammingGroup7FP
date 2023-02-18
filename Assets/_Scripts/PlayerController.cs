@@ -12,10 +12,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 input;
 
     private Vector3 moveDirection;
+
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,11 +27,15 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
 
-        input = (transform.right * moveHorizontal+ transform.forward * moveVertical).normalized;
+        Vector3 forward = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
+        Vector3 right = Camera.main.transform.right;
+
+        input = (right * moveHorizontal+ forward * moveVertical).normalized;
         input *= speed;
 
         if (controller.isGrounded)
         {
+            animator.SetBool("Grounded_b", true);
             moveDirection = input;
             if (Input.GetButton("Jump"))
             {
@@ -41,11 +48,22 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Grounded_b", false);
             input.y = moveDirection.y;
             moveDirection = Vector3.Lerp(moveDirection, input, airControl * Time.deltaTime);
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(input * Time.deltaTime);
+        if (Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0)
+        {
+            transform.forward = new Vector3(input.x, 0, input.z);
+            animator.SetFloat("Speed_f", speed);
+        }
+        else
+        {
+            animator.SetFloat("Speed_f", 0);
+        }
+        
     }
 }
