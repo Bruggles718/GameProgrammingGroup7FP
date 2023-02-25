@@ -7,10 +7,16 @@ public class EnemyBehavior : MonoBehaviour
     public Transform player;
     public float moveSpeed = 5;
     public float minDistance = 2;
+    [SerializeField] private int meleeType = 0;
+    [SerializeField] private int weaponType = 0;
 
     private Animator animator;
 
     private bool dead = false;
+
+    [SerializeField] private float attackAnimationLength;
+    private float finishTime;
+
 
 
     void Start()
@@ -26,19 +32,38 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.time < this.finishTime && !dead)
+        {
+            return;
+        }
         float step = moveSpeed * Time.deltaTime;
 
         float distance = Vector3.Distance(transform.position, player.position);
 
+        if (!dead)
+        {
+            transform.LookAt(player);
+        }
+
         if (distance > minDistance && !dead)
         {
             animator.SetFloat("Speed_f", moveSpeed);
-            transform.LookAt(player);
+            animator.SetInteger("WeaponType_int", 0);
+            animator.SetInteger("MeleeType_int", 0);
             transform.position = Vector3.MoveTowards(transform.position, player.position, step);
+        }
+        else if (dead)
+        {
+            animator.SetFloat("Speed_f", 0);
+            animator.SetInteger("WeaponType_int", 0);
+            animator.SetInteger("MeleeType_int", 0);
         }
         else
         {
             animator.SetFloat("Speed_f", 0);
+            animator.SetInteger("WeaponType_int", this.weaponType);
+            animator.SetInteger("MeleeType_int", this.meleeType);
+            this.finishTime = Time.time + this.attackAnimationLength;
         }
     }
 

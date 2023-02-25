@@ -5046,6 +5046,10 @@ PrefabInstance:
       value: SF_Wep_Human_Longsword_01
       objectReference: {fileID: 0}
     - target: {fileID: 114046, guid: 8e6e95740e5530f45961c6d1f4c65422, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114046, guid: 8e6e95740e5530f45961c6d1f4c65422, type: 3}
       propertyPath: m_TagString
       value: PlayerWeapon
       objectReference: {fileID: 0}
