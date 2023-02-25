@@ -31,6 +31,8 @@ public class PlayerBehavior : MonoBehaviour
                 //GameObject newSword = 
                   //  Instantiate(swordPrefab, transform.position, transform.rotation) as GameObject;
                 sword.SetActive(false);
+                GetComponent<PlayerMeleeAttack>().enabled = false;
+                GetComponent<PlayerBowAttack>().enabled = true;
                 break;
             
             case "SF_Wep_Human_Longsword_01":
@@ -38,6 +40,8 @@ public class PlayerBehavior : MonoBehaviour
                 //GameObject newBow = 
                   //  Instantiate(bowPrefab, transform.position, transform.rotation) as GameObject;
                 bow.SetActive(false);
+                GetComponent<PlayerMeleeAttack>().enabled = true;
+                GetComponent<PlayerBowAttack>().enabled = false;
                 break;
         }
     }
