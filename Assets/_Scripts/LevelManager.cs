@@ -21,8 +21,8 @@ public class LevelManager : MonoBehaviour
     {
         isGameOver = false;
         currentTime = 0.0f;
-        SetTimerText();
-        scoreText.text = score.ToString();
+        //SetTimerText();
+        //scoreText.text = score.ToString();
         //currentScore = PickupBehavior.pickupCount;
     }
 
@@ -31,9 +31,9 @@ public class LevelManager : MonoBehaviour
     {
         if (!isGameOver)
         {
-            scoreText.text = score.ToString();
+            //scoreText.text = score.ToString();
             currentTime += Time.deltaTime; 
-            SetTimerText();
+            //SetTimerText();
             /*
              This is where we set condition for next level
             if ()
@@ -61,9 +61,9 @@ public class LevelManager : MonoBehaviour
     public void LevelBeat()
     {
         isGameOver = true;
-        gameText.text = "You win!";
-        gameText.gameObject.SetActive(true);
-        AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
+        //gameText.text = "You win!";
+        //gameText.gameObject.SetActive(true);
+        //AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
         if (!string.IsNullOrEmpty(nextLevel))
         { 
             Invoke("LoadNextLevel", 2);
