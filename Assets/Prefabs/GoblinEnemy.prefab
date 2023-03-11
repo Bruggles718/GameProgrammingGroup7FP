@@ -2448,7 +2448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864b7e8826fae10429ceb0cf9ce08a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 5
+  startingHealth: 2
   deadSFX: {fileID: 0}
 --- !u!1 &3553686574034211866
 GameObject:
