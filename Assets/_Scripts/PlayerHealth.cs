@@ -49,4 +49,12 @@ public class PlayerHealth : MonoBehaviour
         //AudioSource.PlayClipAtPoint(deadSFX, transform.position);
         //transform.Rotate(-90, 0, 0, Space.Self);
     }
+
+     public void TakeHealth(int healthAmount) {
+        if (currentHealth < 100) {
+            currentHealth += healthAmount;
+            healthSlider.value = Mathf.Clamp(currentHealth, 0, 100);
+        }  
+        
+    } 
 }
