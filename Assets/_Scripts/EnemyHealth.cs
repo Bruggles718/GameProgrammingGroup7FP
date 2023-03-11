@@ -38,8 +38,11 @@ public class EnemyHealth : MonoBehaviour
     void EnemyDies()
     {
         Debug.Log("Enemy dies");
-        AudioSource.PlayClipAtPoint(deadSFX, transform.position);
-        Destroy(gameObject);
+        //AudioSource.PlayClipAtPoint(deadSFX, transform.position);
+        //Destroy(gameObject);
+        this.GetComponent<EnemyBehavior>().Die();
+        this.GetComponent<Animator>().SetBool("Death_b", true);
+        Destroy(gameObject, 2);
     }
 
  

@@ -17,7 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float attackAnimationLength;
     private float finishTime;
 
-    public int damageAmount = 1;
+    //public int damageAmount = 1;
 
     void Start()
     {
@@ -67,6 +67,11 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        this.dead = true;
+    }
+
     /*
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("PlayerWeapon") && this.player.GetComponent<Animator>().GetInteger("WeaponType_int") > 0) {
@@ -81,8 +86,8 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerWeapon"))
         {
-            var enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-            enemyHealth.TakeDamage(damageAmount);
+            //var enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+            //enemyHealth.TakeDamage(damageAmount);
         }
     }
 }
