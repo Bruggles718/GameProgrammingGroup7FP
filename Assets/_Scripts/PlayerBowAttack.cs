@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBowAttack : MonoBehaviour
 {
+    [Header("Attack parameters")]
     [SerializeField] private float animationLength;
     [SerializeField] private float arrowReleaseTime;
     [SerializeField] private GameObject arrowInHand;
@@ -16,6 +18,11 @@ public class PlayerBowAttack : MonoBehaviour
     private bool releasedArrow = false;
 
     private bool resetAnim;
+
+    [Header("Stamina Bar")]
+    [SerializeField] private Slider staminaBar;
+    [SerializeField] private float amountOfStaminaToUse;
+    private StaminaRefiller staminaRefiller;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +39,8 @@ public class PlayerBowAttack : MonoBehaviour
         this.animator.SetInteger("MeleeType_int", 0);
 
         this.resetAnim = true;
+
+        this.staminaRefiller = GetComponent<StaminaRefiller>();
     }
 
     // Update is called once per frame
@@ -66,10 +75,13 @@ public class PlayerBowAttack : MonoBehaviour
 
                 this.animator.SetBool("Shoot_b", false);
                 this.resetAnim = false;
+
+                this.staminaRefiller.enabled = true;
             }
         }
-        if (Input.GetButtonDown("Fire1") && Time.time > this.finishTime)
+        if (Input.GetButtonDown("Fire1") && Time.time > this.finishTime && this.staminaBar.value > amountOfStaminaToUse)
         {
+            this.staminaBar.value -= amountOfStaminaToUse;
             this.playerController.enabled = false;
             var mousePos = Helpers.GetMousePosition3D(new Plane(Vector3.up, this.transform.position));
             this.transform.LookAt(mousePos);
@@ -83,6 +95,7 @@ public class PlayerBowAttack : MonoBehaviour
             this.arrowReleaseFinishTime = Time.time + this.arrowReleaseTime;
             this.releasedArrow = false;
             this.arrowInHand.SetActive(true);
+            this.staminaRefiller.enabled = false;
         }
     }
 }
