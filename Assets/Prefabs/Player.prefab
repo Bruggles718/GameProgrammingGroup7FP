@@ -2368,7 +2368,7 @@ MonoBehaviour:
   arrowProjectilePrefab: {fileID: 1281142225952640949, guid: f3b9bd6dafd3f5f47acf986e0e12e25e, type: 3}
   arrowSpeed: 30
   staminaBar: {fileID: 0}
-  amountOfStaminaToUse: 75
+  amountOfStaminaToUse: 50
 --- !u!114 &234892386
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,14 +15,14 @@ public class LevelManager : MonoBehaviour
     public static float currentTime;
     public static int score = 0;
     public Text scoreText;
-    //private int currentScore;
+    private int currentScore;
     // Start is called before the first frame update
     void Start()
     {
         isGameOver = false;
         currentTime = 0.0f;
-        //SetTimerText();
-        //scoreText.text = score.ToString();
+        SetTimerText();
+        scoreText.text = score.ToString();
         //currentScore = PickupBehavior.pickupCount;
     }
 
@@ -31,9 +31,9 @@ public class LevelManager : MonoBehaviour
     {
         if (!isGameOver)
         {
-            //scoreText.text = score.ToString();
+            scoreText.text = score.ToString();
             currentTime += Time.deltaTime; 
-            //SetTimerText();
+            SetTimerText();
             /*
              This is where we set condition for next level
             if ()
@@ -61,8 +61,8 @@ public class LevelManager : MonoBehaviour
     public void LevelBeat()
     {
         isGameOver = true;
-        //gameText.text = "You win!";
-        //gameText.gameObject.SetActive(true);
+        gameText.text = "You win!";
+        gameText.gameObject.SetActive(true);
         //AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
         if (!string.IsNullOrEmpty(nextLevel))
         { 
