@@ -39,6 +39,13 @@ public class PlayerHealth : MonoBehaviour
 
     void PlayerDies() {
         Debug.Log("Player is dead");
+        var animator = GetComponent<Animator>();
+        animator.SetFloat("Speed_f", 0);
+        animator.SetBool("Death_b", true);
+        animator.SetInteger("DeathType_int", 1);
+        GetComponent<PlayerController>().enabled = false;
+        GetComponent<PlayerMeleeAttack>().enabled = false;
+        GetComponent<PlayerBowAttack>().enabled = false;
         //AudioSource.PlayClipAtPoint(deadSFX, transform.position);
         //transform.Rotate(-90, 0, 0, Space.Self);
     }

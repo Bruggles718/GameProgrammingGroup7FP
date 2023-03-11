@@ -14,11 +14,15 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
 
     private Animator animator;
+
+    private float distanceToGround;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+
+        this.distanceToGround = GetComponent<Collider>().bounds.extents.y;
     }
 
     // Update is called once per frame
@@ -33,7 +37,7 @@ public class PlayerController : MonoBehaviour
         input = (right * moveHorizontal+ forward * moveVertical).normalized;
         input *= speed;
 
-        if (controller.isGrounded)
+        if (this.IsGrounded())
         {
             moveDirection = input;
             if (Input.GetButton("Jump"))
@@ -52,7 +56,7 @@ public class PlayerController : MonoBehaviour
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(input * Time.deltaTime);
+        controller.Move(moveDirection * Time.deltaTime);
         if (Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0)
         {
             transform.forward = new Vector3(input.x, 0, input.z);
@@ -63,5 +67,10 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Speed_f", 0);
         }
         
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(this.transform.position + GetComponent<CharacterController>().center, -Vector3.up, this.distanceToGround + 0.1f);
     }
 }
