@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2498589145144173709}
   - component: {fileID: 2498589145144173708}
   - component: {fileID: 2498589145144173707}
-  - component: {fileID: 1906072311708325130}
+  - component: {fileID: 8826496623348926467}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Pickup
@@ -34088,7 +34088,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &1906072311708325130
+--- !u!114 &8826496623348926467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34097,8 +34097,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2498589145144173705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004debe81dfd5d1499ea5dbeb0cee343, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c65922197feca04cacbbd031cc514b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs:
+  prefabs:
   - {fileID: 3553686574034208104, guid: 082a704547f696b488cf4e8195210aec, type: 3}

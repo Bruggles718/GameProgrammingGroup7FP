@@ -9,7 +9,9 @@ public class WeaponPickup : MonoBehaviour
 
     public PlayerBehavior playerBehavior;
 
-    private Boolean doPickup = false;
+    private bool doPickup = false;
+
+    public string weaponName;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class WeaponPickup : MonoBehaviour
     {
         if (Input.GetKeyDown(pickupKey) && doPickup)
         {
-            playerBehavior.SetWeapon(gameObject.name);
+            playerBehavior.SetWeapon(weaponName);
             // playerBehavior.SetDamageType("");
             doPickup = false;
             Destroy(gameObject);
@@ -33,6 +35,10 @@ public class WeaponPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         { 
             doPickup = true;
+            if (this.playerBehavior == null)
+            {
+                this.playerBehavior = other.GetComponent<PlayerBehavior>();
+            }
         }
         else
         {
