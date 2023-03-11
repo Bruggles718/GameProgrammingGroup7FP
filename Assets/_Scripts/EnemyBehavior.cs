@@ -17,7 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float attackAnimationLength;
     private float finishTime;
 
-
+    public int damageAmount = 1;
 
     void Start()
     {
@@ -67,11 +67,22 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    /*
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("PlayerWeapon") && this.player.GetComponent<Animator>().GetInteger("WeaponType_int") > 0) {
             dead = true;
             this.animator.SetBool("Death_b", true);
             Destroy(gameObject,2);
+        }
+    }
+    */
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("PlayerWeapon"))
+        {
+            var enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+            enemyHealth.TakeDamage(damageAmount);
         }
     }
 }
