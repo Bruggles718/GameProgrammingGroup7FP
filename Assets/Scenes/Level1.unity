@@ -517,7 +517,7 @@ MonoBehaviour:
   - {fileID: 474328522932304325, guid: 03a3642da58caa242b865c0ab2fe72df, type: 3}
   - {fileID: 3037380761057271672, guid: ce426b99c4cf57e48b1a2e3ad548e6a1, type: 3}
   - {fileID: 1752085345303738365, guid: 139b03c9dfef19c47bdb14cc27b27b8c, type: 3}
-  level: 1
+  level: 2
   gridWidth: 4
   gridHeight: 4
   roomBaseDimension: 30

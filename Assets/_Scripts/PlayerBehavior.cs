@@ -26,7 +26,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         switch (weaponName)
         {
-            case "SF_Wep_Human_Bow_01":
+            case "bow":
                 bow.SetActive(true);
                 //GameObject newSword = 
                   //  Instantiate(swordPrefab, transform.position, transform.rotation) as GameObject;
@@ -35,7 +35,7 @@ public class PlayerBehavior : MonoBehaviour
                 GetComponent<PlayerBowAttack>().enabled = true;
                 break;
             
-            case "SF_Wep_Human_Longsword_01":
+            case "sword":
                 sword.SetActive(true);
                 //GameObject newBow = 
                   //  Instantiate(bowPrefab, transform.position, transform.rotation) as GameObject;
