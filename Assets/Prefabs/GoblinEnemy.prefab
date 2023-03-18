@@ -2422,6 +2422,7 @@ MonoBehaviour:
   minDistance: 3
   meleeType: 1
   weaponType: 12
+  swingSFX: {fileID: 8300000, guid: 3183bf15766f5bb4fae79bdcec51e4d2, type: 3}
   attackAnimationLength: 1.167
 --- !u!114 &3524790827291926206
 MonoBehaviour:
