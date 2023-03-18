@@ -159,8 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 5547105866987436562}
   gameText: {fileID: 5547105865880500492}
-  gameOverSFX: {fileID: 0}
-  gameWonSFX: {fileID: 0}
+  gameOverSFX: {fileID: 8300000, guid: 3823ee7f44a9df64390a14c2b76755ed, type: 3}
+  gameWonSFX: {fileID: 8300000, guid: dad36d267b7922744bc64e964ae33aaf, type: 3}
   nextLevel: Level2
   scoreText: {fileID: 5547105867030574354}
   buttonPrompt: {fileID: 5302586481739286515}

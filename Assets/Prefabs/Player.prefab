@@ -2398,6 +2398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
+  hitSFX: {fileID: 8300000, guid: f7fb73e4f32e67449a726ca11284d52d, type: 3}
   healthSlider: {fileID: 0}
 --- !u!114 &234892388
 MonoBehaviour:

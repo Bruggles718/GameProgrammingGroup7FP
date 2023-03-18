@@ -6,8 +6,9 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 100;
-    //public AudioClip deadSFX;
+    public AudioClip hitSFX;
     public Slider healthSlider;
+
 
     int currentHealth;
     
@@ -28,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth > 0) {
             currentHealth -= damageAmount;
             healthSlider.value = currentHealth;
+            AudioSource.PlayClipAtPoint(hitSFX, this.transform.position);
         }  
         
         if (currentHealth == 0) {
@@ -46,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<PlayerController>().enabled = false;
         GetComponent<PlayerMeleeAttack>().enabled = false;
         GetComponent<PlayerBowAttack>().enabled = false;
+        FindObjectOfType<LevelManager>().LevelLost();
         //AudioSource.PlayClipAtPoint(deadSFX, transform.position);
         //transform.Rotate(-90, 0, 0, Space.Self);
     }
