@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
     public static int score = 0;
     public Text scoreText;
     private int currentScore;
+
+    public Text buttonPrompt;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,5 +81,10 @@ public class LevelManager : MonoBehaviour
     void LoadCurrentLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void SetButtonPromptActive(bool state)
+    {
+        this.buttonPrompt.enabled = state;
     }
 }

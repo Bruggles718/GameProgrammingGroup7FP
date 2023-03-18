@@ -14,11 +14,12 @@ public class EndingRoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var levelManager = FindObjectOfType<LevelManager>();
         if (inRange && Input.GetKeyDown(KeyCode.E))
         {
-            var levelManager = FindObjectOfType<LevelManager>();
             levelManager.LevelBeat();
         }
+        levelManager.SetButtonPromptActive(this.inRange);
     }
 
     private void OnTriggerEnter(Collider other)
