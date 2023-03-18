@@ -16,6 +16,7 @@ public class StaminaRefiller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LevelManager.isGameOver) return;
         this.staminaSlider.value = Mathf.Lerp(0, 
             this.staminaSlider.maxValue, 
             (this.staminaSlider.value + Time.deltaTime * this.refillSpeed) / this.staminaSlider.maxValue);

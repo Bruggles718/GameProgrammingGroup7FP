@@ -21,6 +21,7 @@ public class WeaponPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LevelManager.isGameOver) return;
         if (Input.GetKeyDown(pickupKey) && doPickup)
         {
             playerBehavior.SetWeapon(weaponName);
@@ -32,6 +33,7 @@ public class WeaponPickup : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (LevelManager.isGameOver) return;
         if (other.CompareTag("Player"))
         { 
             doPickup = true;
@@ -49,6 +51,7 @@ public class WeaponPickup : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (LevelManager.isGameOver) return;
         doPickup = false;
     }
 }

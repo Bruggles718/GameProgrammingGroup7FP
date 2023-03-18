@@ -19,6 +19,7 @@ public class PlayerWeaponHit : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (LevelManager.isGameOver) return;
         if (collision.gameObject.CompareTag("Enemy"))
         {
             var enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();

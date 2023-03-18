@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int damageAmount) {
+        if (LevelManager.isGameOver) return;
         if (currentHealth > 0) {
             currentHealth -= damageAmount;
             healthSlider.value = currentHealth;
@@ -40,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void PlayerDies() {
+        if (LevelManager.isGameOver) return;
         Debug.Log("Player is dead");
         var animator = GetComponent<Animator>();
         animator.SetFloat("Speed_f", 0);
@@ -54,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
      public void TakeHealth(int healthAmount) {
+        if (LevelManager.isGameOver) return;
         if (currentHealth < 100) {
             currentHealth += healthAmount;
             healthSlider.value = Mathf.Clamp(currentHealth, 0, 100);
