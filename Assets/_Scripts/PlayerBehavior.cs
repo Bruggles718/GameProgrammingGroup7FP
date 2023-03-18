@@ -18,7 +18,7 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (LevelManager.isGameOver) return;
     }
 
     // Set the player's current weapon

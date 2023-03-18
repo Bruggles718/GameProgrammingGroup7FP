@@ -42,6 +42,8 @@ public class LevelManager : MonoBehaviour
             {
                 LevelBeat();
             }*/
+        } else {
+            return;
         }
     }
 

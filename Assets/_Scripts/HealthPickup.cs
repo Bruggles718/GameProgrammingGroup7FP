@@ -15,6 +15,7 @@ public class HealthPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LevelManager.isGameOver) return;
         transform.Rotate(Vector3.forward, 90 * Time.deltaTime);
         if (transform.position.y < Random.Range(1.0f, 3.0f)) {
             Destroy(gameObject.GetComponent<Rigidbody>());
@@ -22,6 +23,7 @@ public class HealthPickup : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+        if (LevelManager.isGameOver) return;
         if (other.CompareTag("Player")) {
             gameObject.SetActive(false);
 

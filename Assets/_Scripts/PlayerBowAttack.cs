@@ -47,6 +47,7 @@ public class PlayerBowAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LevelManager.isGameOver) return;
         if (Time.time < this.arrowReleaseFinishTime)
         {
             return;
