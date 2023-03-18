@@ -46,6 +46,7 @@ public class EnemyHealth : MonoBehaviour
         //Destroy(gameObject);
         this.GetComponent<EnemyBehavior>().Die();
         this.GetComponent<Animator>().SetBool("Death_b", true);
+        FindObjectOfType<LevelManager>().AddScore(1);
         Destroy(gameObject, 2);
     }
 

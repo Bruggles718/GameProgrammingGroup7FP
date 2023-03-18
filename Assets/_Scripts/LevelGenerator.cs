@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private GameObject startingRoomPrefab;
     [SerializeField] private GameObject endingRoomPrefab;
     [SerializeField, Tooltip("Do not include starting room and ending room")] private List<GameObject> roomPrefabs;
@@ -13,6 +14,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private int roomBaseDimension = 30;
     private int baseRoomCount;
     private int additionalRoomCountPerLevel;
+
+    private Vector3 startingPos;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -27,12 +30,16 @@ public class LevelGenerator : MonoBehaviour
         {
             this.InstantiateRoomPrefabs(rooms);
         }
+
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.position = startingPos;
+        player.GetComponent<CharacterController>().enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (LevelManager.isGameOver) return;
+        
     }
 
     /// <summary>
@@ -96,8 +103,8 @@ public class LevelGenerator : MonoBehaviour
             if (i == 0)
             {
                 roomPrefab = this.startingRoomPrefab;
-                GameObject player = GameObject.FindGameObjectWithTag("Player");
-                player.transform.position = new Vector3(pos.x * this.roomBaseDimension, player.transform.position.y, pos.y * this.roomBaseDimension);
+                //player.transform.position = new Vector3(pos.x * this.roomBaseDimension, player.transform.position.y, pos.y * this.roomBaseDimension);
+                startingPos = new Vector3(pos.x * this.roomBaseDimension, player.transform.position.y, pos.y * this.roomBaseDimension);
             }
             else if (i == totalRoomCount - 1)
             {

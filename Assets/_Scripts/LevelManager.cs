@@ -15,7 +15,6 @@ public class LevelManager : MonoBehaviour
     public static float currentTime;
     public static int score = 0;
     public Text scoreText;
-    private int currentScore;
 
     public Text buttonPrompt;
     // Start is called before the first frame update
@@ -88,5 +87,10 @@ public class LevelManager : MonoBehaviour
     public void SetButtonPromptActive(bool state)
     {
         this.buttonPrompt.enabled = state;
+    }
+
+    public void AddScore(int scoreToAdd)
+    {
+        score += scoreToAdd;
     }
 }
