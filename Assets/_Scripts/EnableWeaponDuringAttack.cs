@@ -15,6 +15,7 @@ public class EnableWeaponDuringAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LevelManager.isGameOver) return;
         if (animator.GetInteger("WeaponType_int") > 0 && animator.GetInteger("MeleeType_int") > 0)
         {
             this.myCollider.enabled = true;

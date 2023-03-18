@@ -24,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
+        if (LevelManager.isGameOver) return;
         if (currentHealth > 0)
         {
             currentHealth -= damageAmount;
@@ -39,6 +40,7 @@ public class EnemyHealth : MonoBehaviour
 
     void EnemyDies()
     {
+        if (LevelManager.isGameOver) return;
         Debug.Log("Enemy dies");
         //AudioSource.PlayClipAtPoint(deadSFX, transform.position);
         //Destroy(gameObject);

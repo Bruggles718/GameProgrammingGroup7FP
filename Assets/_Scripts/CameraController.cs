@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (LevelManager.isGameOver) return;
         this.transform.position = player.transform.position;
     }
 }
