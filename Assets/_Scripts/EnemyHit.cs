@@ -19,6 +19,7 @@ public class EnemyHit : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (LevelManager.isGameOver) return;
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Hit player for " + this.damageAmount.ToString() + " damage");

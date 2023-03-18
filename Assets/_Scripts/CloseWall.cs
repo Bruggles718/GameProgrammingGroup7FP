@@ -18,6 +18,7 @@ public class CloseWall : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        if (LevelManager.isGameOver) return;
         if (collision.gameObject.CompareTag("CloseWall"))
         {
             Destroy(this.gameObject);
