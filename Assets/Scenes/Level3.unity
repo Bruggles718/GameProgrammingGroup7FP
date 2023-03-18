@@ -164,6 +164,7 @@ MonoBehaviour:
   - {fileID: 1752085345303738365, guid: 139b03c9dfef19c47bdb14cc27b27b8c, type: 3}
   - {fileID: 5628204106295730683, guid: 60b77cb9da99f3c4faa6715cf0283cc5, type: 3}
   - {fileID: 784555330962008120, guid: 8a6d48ae4993fc645945c929240db19f, type: 3}
+  - {fileID: 3037380761057271672, guid: fca1faa246a9e0d4295f629f2d595115, type: 3}
   level: 3
   gridWidth: 4
   gridHeight: 4
@@ -273,7 +274,7 @@ PrefabInstance:
     - target: {fileID: 6130267803132267477, guid: a706c0e606c64564495618b33605f57e, type: 3}
       propertyPath: staminaBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1900545227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a706c0e606c64564495618b33605f57e, type: 3}
 --- !u!1 &1115973469
