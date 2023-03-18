@@ -9,6 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     public float minDistance = 2;
     [SerializeField] private int meleeType = 0;
     [SerializeField] private int weaponType = 0;
+    [SerializeField] private AudioClip swingSFX;
 
     private Animator animator;
 
@@ -64,6 +65,7 @@ public class EnemyBehavior : MonoBehaviour
             animator.SetInteger("WeaponType_int", this.weaponType);
             animator.SetInteger("MeleeType_int", this.meleeType);
             this.finishTime = Time.time + this.attackAnimationLength;
+            AudioSource.PlayClipAtPoint(this.swingSFX, this.transform.position);
         }
     }
 

@@ -6,8 +6,9 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 100;
-    //public AudioClip deadSFX;
+    public AudioClip hitSFX;
     public Slider healthSlider;
+
 
     int currentHealth;
     
@@ -25,9 +26,11 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int damageAmount) {
+        if (LevelManager.isGameOver) return;
         if (currentHealth > 0) {
             currentHealth -= damageAmount;
             healthSlider.value = currentHealth;
+            AudioSource.PlayClipAtPoint(hitSFX, this.transform.position);
         }  
         
         if (currentHealth == 0) {
@@ -38,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void PlayerDies() {
+        if (LevelManager.isGameOver) return;
         Debug.Log("Player is dead");
         var animator = GetComponent<Animator>();
         animator.SetFloat("Speed_f", 0);
@@ -46,11 +50,13 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<PlayerController>().enabled = false;
         GetComponent<PlayerMeleeAttack>().enabled = false;
         GetComponent<PlayerBowAttack>().enabled = false;
+        FindObjectOfType<LevelManager>().LevelLost();
         //AudioSource.PlayClipAtPoint(deadSFX, transform.position);
         //transform.Rotate(-90, 0, 0, Space.Self);
     }
 
      public void TakeHealth(int healthAmount) {
+        if (LevelManager.isGameOver) return;
         if (currentHealth < 100) {
             currentHealth += healthAmount;
             healthSlider.value = Mathf.Clamp(currentHealth, 0, 100);

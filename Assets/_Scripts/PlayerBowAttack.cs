@@ -16,6 +16,7 @@ public class PlayerBowAttack : MonoBehaviour
     private float arrowReleaseFinishTime;
     private PlayerController playerController;
     private bool releasedArrow = false;
+    [SerializeField] private AudioClip shootSFX;
 
     private bool resetAnim;
 
@@ -97,6 +98,7 @@ public class PlayerBowAttack : MonoBehaviour
             this.releasedArrow = false;
             this.arrowInHand.SetActive(true);
             this.staminaRefiller.enabled = false;
+            AudioSource.PlayClipAtPoint(this.shootSFX, this.transform.position);
         }
     }
 }

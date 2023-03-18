@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
     public int startingHealth = 5;
-    public AudioClip deadSFX;
+    //public AudioClip deadSFX;
+    public AudioClip hitSFX;
     int currentHealth;
 
 
@@ -26,7 +27,8 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth > 0)
         {
             currentHealth -= damageAmount;
-            
+            AudioSource.PlayClipAtPoint(hitSFX, this.transform.position);
+
         }
         if (currentHealth <= 0)
         {

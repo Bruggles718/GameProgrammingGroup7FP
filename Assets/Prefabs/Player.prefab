@@ -2334,6 +2334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationLength: 1.167
+  swingSFX: {fileID: 8300000, guid: 3183bf15766f5bb4fae79bdcec51e4d2, type: 3}
 --- !u!114 &3256994461677844022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2367,6 +2368,7 @@ MonoBehaviour:
   arrowInHand: {fileID: 3256994461115176615}
   arrowProjectilePrefab: {fileID: 1281142225952640949, guid: f3b9bd6dafd3f5f47acf986e0e12e25e, type: 3}
   arrowSpeed: 30
+  shootSFX: {fileID: 8300000, guid: 0cf944a30a4dba848af08664fc17aacb, type: 3}
   staminaBar: {fileID: 0}
   amountOfStaminaToUse: 50
 --- !u!114 &234892386
@@ -2398,6 +2400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
+  hitSFX: {fileID: 8300000, guid: f7fb73e4f32e67449a726ca11284d52d, type: 3}
   healthSlider: {fileID: 0}
 --- !u!114 &234892388
 MonoBehaviour:

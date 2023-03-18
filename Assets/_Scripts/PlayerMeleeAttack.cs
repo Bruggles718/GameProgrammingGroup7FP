@@ -8,6 +8,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     private Animator animator;
     private float finishTime;
     private PlayerController playerController;
+    [SerializeField] private AudioClip swingSFX;
 
     private bool resetAnim;
     private bool hasMeleeWeapon = true;
@@ -30,6 +31,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LevelManager.isGameOver) return;
         if (Time.time < this.finishTime)
         {
             return;
@@ -56,6 +58,7 @@ public class PlayerMeleeAttack : MonoBehaviour
             this.animator.SetInteger("MeleeType_int", 1);
             this.resetAnim = true;
             this.finishTime = Time.time + this.animationLength;
+            AudioSource.PlayClipAtPoint(this.swingSFX, this.transform.position);
         }
     }
 }

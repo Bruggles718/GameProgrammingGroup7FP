@@ -67,7 +67,7 @@ public class LevelManager : MonoBehaviour
         isGameOver = true;
         gameText.text = "You win!";
         gameText.gameObject.SetActive(true);
-        //AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
         if (!string.IsNullOrEmpty(nextLevel))
         { 
             Invoke("LoadNextLevel", 2);
