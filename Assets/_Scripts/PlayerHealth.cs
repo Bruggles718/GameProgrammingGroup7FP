@@ -8,32 +8,36 @@ public class PlayerHealth : MonoBehaviour
     public int startingHealth = 100;
     public AudioClip hitSFX;
     public Slider healthSlider;
-
-
-    int currentHealth;
+    public GameObject background;
+    public GameObject fillArea;
+    public int maxPossibleHealth = 300;
+    private int _currentMaxHealth;
+    private int _currentHealth;
+    private Vector2 _originalBoxSize;
+    private int _originalMaxHealth;
+    private RectTransform _healthSliderTransform;
+    
     
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = startingHealth;
-        healthSlider.value = currentHealth;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _currentHealth = startingHealth;
+        _currentMaxHealth = 100;
+        healthSlider.value = _currentHealth;
+        _originalBoxSize = healthSlider.GetComponent<RectTransform>().sizeDelta;
+        _originalMaxHealth = _currentMaxHealth;
+        _healthSliderTransform = healthSlider.GetComponent<RectTransform>();
     }
 
     public void TakeDamage(int damageAmount) {
         if (LevelManager.isGameOver) return;
-        if (currentHealth > 0) {
-            currentHealth -= damageAmount;
-            healthSlider.value = currentHealth;
+        if (_currentHealth > 0) {
+            _currentHealth -= damageAmount;
+            healthSlider.value = _currentHealth;
             AudioSource.PlayClipAtPoint(hitSFX, this.transform.position);
         }  
         
-        if (currentHealth == 0) {
+        if (_currentHealth == 0) {
             PlayerDies();
         }
 
@@ -57,10 +61,23 @@ public class PlayerHealth : MonoBehaviour
 
      public void TakeHealth(int healthAmount) {
         if (LevelManager.isGameOver) return;
-        if (currentHealth < 100) {
-            currentHealth += healthAmount;
-            healthSlider.value = Mathf.Clamp(currentHealth, 0, 100);
+        if (_currentHealth < _currentMaxHealth) {
+            _currentHealth += healthAmount;
+            healthSlider.value = Mathf.Clamp(_currentHealth, 0, _currentMaxHealth);
         }  
         
-    } 
+    }
+
+     public void ChangeCurrentMaxHealth(int amount)
+     {
+         _currentMaxHealth += amount;
+         _currentMaxHealth = Mathf.Clamp(_currentMaxHealth, _originalMaxHealth, maxPossibleHealth);
+         float newXPos = _healthSliderTransform.sizeDelta.x 
+                         + (float)amount / _originalMaxHealth * _originalBoxSize.x;
+         float xValue = Mathf.Clamp(newXPos, _originalBoxSize.x, _originalBoxSize.x * 3);
+         _healthSliderTransform.sizeDelta = new Vector2(xValue, _healthSliderTransform.sizeDelta.y);
+         healthSlider.maxValue = _currentMaxHealth;
+         _currentHealth = _currentMaxHealth;
+         healthSlider.value = _currentHealth;
+     }
 }
