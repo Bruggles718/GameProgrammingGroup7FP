@@ -21,12 +21,23 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _currentHealth = startingHealth;
-        _currentMaxHealth = 100;
+        //_currentHealth = startingHealth;
+        _currentHealth = PlayerInfo.currentHealth;
+        _currentMaxHealth = PlayerInfo.maxHealth;
         healthSlider.value = _currentHealth;
         _originalBoxSize = healthSlider.GetComponent<RectTransform>().sizeDelta;
-        _originalMaxHealth = _currentMaxHealth;
+        _originalMaxHealth = 100;
         _healthSliderTransform = healthSlider.GetComponent<RectTransform>();
+        ChangeCurrentMaxHealth(_currentMaxHealth - _originalMaxHealth);
+        _currentHealth = PlayerInfo.currentHealth;
+        healthSlider.value = _currentHealth;
+    }
+    
+    void Update()
+    {
+        if (LevelManager.isGameOver) return;
+        PlayerInfo.currentHealth = _currentHealth;
+        PlayerInfo.maxHealth = _currentMaxHealth;
     }
 
     public void TakeDamage(int damageAmount) {

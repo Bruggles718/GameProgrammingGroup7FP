@@ -12,7 +12,7 @@ public class PlayerBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.SetWeapon(PlayerInfo.weaponType);
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class PlayerBehavior : MonoBehaviour
     // Set the player's current weapon
     public void SetWeapon(string weaponName)
     {
+        PlayerInfo.weaponType = weaponName;
         switch (weaponName)
         {
             case "bow":

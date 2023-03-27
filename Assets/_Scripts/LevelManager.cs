@@ -17,6 +17,12 @@ public class LevelManager : MonoBehaviour
     public Text scoreText;
 
     public Text buttonPrompt;
+    
+    void Awake()
+    {
+        PlayerInfo.LoadStartingValues();
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +78,7 @@ public class LevelManager : MonoBehaviour
             Invoke("LoadNextLevel", 2);
             score = 0;
         }
+        PlayerInfo.OverwriteStartingValues();
     }
 
     void LoadNextLevel()
