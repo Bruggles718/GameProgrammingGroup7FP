@@ -7,16 +7,16 @@ public class EnemyBehavior : MonoBehaviour
     public Transform player;
     public float moveSpeed = 5;
     public float minDistance = 2;
-    [SerializeField] private int meleeType = 0;
-    [SerializeField] private int weaponType = 0;
+    [SerializeField] protected int meleeType = 0;
+    [SerializeField] protected int weaponType = 0;
     [SerializeField] private AudioClip swingSFX;
 
-    private Animator animator;
+    protected Animator animator;
 
-    private bool dead = false;
+    protected bool dead = false;
 
-    [SerializeField] private float attackAnimationLength;
-    private float finishTime;
+    [SerializeField] protected float attackAnimationLength;
+    protected float finishTime;
 
     //public int damageAmount = 1;
 

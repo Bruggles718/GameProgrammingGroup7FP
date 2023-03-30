@@ -23,7 +23,7 @@ public class PlayerWeaponHit : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             var enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
-            enemyHealth.TakeDamage(damageAmount);
+            if (enemyHealth) enemyHealth.TakeDamage(damageAmount);
         }
     }
 }

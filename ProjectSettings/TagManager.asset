@@ -19,9 +19,9 @@ TagManager:
   - PlayerArrow
   - Player
   - EnemyWeapon
-  - 
-  - 
-  - 
+  - EnemyArrow
+  - RangedEnemy
+  - MeleeEnemy
   - 
   - 
   - 

@@ -74,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
         if (LevelManager.isGameOver) return;
         if (_currentHealth < _currentMaxHealth) {
             _currentHealth += healthAmount;
+            _currentHealth = Mathf.Clamp(_currentHealth, 0, _currentMaxHealth);
             healthSlider.value = Mathf.Clamp(_currentHealth, 0, _currentMaxHealth);
         }  
         

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3509668942379505271
+--- !u!1 &1281142225952640949
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3509668942379921103}
-  - component: {fileID: 3509668942382854181}
-  - component: {fileID: 3509668942381753497}
-  - component: {fileID: 3509668942379608842}
-  - component: {fileID: 9002858793267470106}
-  m_Layer: 0
-  m_Name: SF_Wep_Human_Longsword_01
-  m_TagString: PlayerWeapon
+  - component: {fileID: 1281142225952862349}
+  - component: {fileID: 1281142225951624131}
+  - component: {fileID: 1281142225950956785}
+  - component: {fileID: 1281142225952770220}
+  - component: {fileID: 1281142225952770219}
+  - component: {fileID: 8054560429642357733}
+  m_Layer: 9
+  m_Name: GoblinArrowProjectile
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3509668942379921103
+--- !u!4 &1281142225952862349
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509668942379505271}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10.56, y: 1.02, z: 9.43}
+  m_GameObject: {fileID: 1281142225952640949}
+  m_LocalRotation: {x: -3.6781095e-16, y: -2.0247831e-15, z: -0.7071066, w: -0.70710707}
+  m_LocalPosition: {x: 2.03, y: 0.024, z: 0.012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!33 &3509668942382854181
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!33 &1281142225951624131
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509668942379505271}
-  m_Mesh: {fileID: 4300000, guid: fa5ffdaa142b1d44288d732c472ced2e, type: 3}
---- !u!23 &3509668942381753497
+  m_GameObject: {fileID: 1281142225952640949}
+  m_Mesh: {fileID: 4300000, guid: e3f4eb28fd28e05469247b9c9fdd55cb, type: 3}
+--- !u!23 &1281142225950956785
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509668942379505271}
+  m_GameObject: {fileID: 1281142225952640949}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,31 +86,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3509668942379608842
+--- !u!54 &1281142225952770220
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281142225952640949}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1281142225952770219
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509668942379505271}
+  m_GameObject: {fileID: 1281142225952640949}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8905983, y: 3.0771205, z: 1.3355552}
-  m_Center: {x: -0.12771225, y: 1.2085109, z: 0.03039655}
---- !u!114 &9002858793267470106
+  m_Size: {x: 0.23552766, y: 1.9627703, z: 0.10804372}
+  m_Center: {x: -0.0000004812753, y: 0.9813842, z: -8.0189e-22}
+--- !u!114 &8054560429642357733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509668942379505271}
+  m_GameObject: {fileID: 1281142225952640949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb8f60479a210d04b87ac491c20382a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 488095b866b9af34ca80b7eed679d895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupKey: 102
-  playerBehavior: {fileID: 0}
-  weaponName: sword
+  damageAmount: 10

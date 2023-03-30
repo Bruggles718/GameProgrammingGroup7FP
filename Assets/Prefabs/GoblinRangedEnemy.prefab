@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034470838}
   - component: {fileID: 3553686574039411700}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Bard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034516552}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Neck_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034583020}
   - component: {fileID: 3553686574039496574}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Executioner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034562656}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Spine_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034496274}
   - component: {fileID: 3553686574039379848}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Elf_Female
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034496808}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Hand_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,8 @@ Transform:
   m_LocalPosition: {x: 0.4403, y: 0, z: 4.781051e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1884911487187790733}
   m_Father: {fileID: 3553686574034513554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -426,7 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034485376}
   - component: {fileID: 3553686574039422168}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Undead_Footman_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034463704}
   - component: {fileID: 3553686574039374878}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_Gladiator_Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034482742}
   - component: {fileID: 3553686574039396598}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Goblin_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034528182}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Arm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034530576}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Arm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +811,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034466292}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: LowerLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034568050}
   - component: {fileID: 3553686574039429174}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_PeasantMan_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034551502}
   - component: {fileID: 3553686574039379274}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Characters_GoblinHunter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034552160}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Toe_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034478278}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Foot_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034513424}
   - component: {fileID: 3553686574039373910}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Undead_Footman_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034469328}
   - component: {fileID: 3553686574039496700}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Undead_Rogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034511976}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Shoulder_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1366,7 +1367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034510770}
   - component: {fileID: 3553686574039486266}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_Dark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034488338}
   - component: {fileID: 3553686574039429676}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Bartender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034562352}
   - component: {fileID: 3553686574039423008}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1687,7 +1688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034506704}
   - component: {fileID: 3553686574039493732}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Jester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,7 +1795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034517468}
   - component: {fileID: 3553686574039470500}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Elf_Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1901,7 +1902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034554958}
   - component: {fileID: 3553686574039473466}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Elf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2008,7 +2009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034529002}
   - component: {fileID: 3553686574039381072}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_PeasantWoman_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2114,7 +2115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034557400}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: UpperLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2146,7 +2147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034473934}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Hips_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2181,7 +2182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034565756}
   - component: {fileID: 3553686574039386026}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_Hood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,11 +2291,11 @@ GameObject:
   - component: {fileID: 3553686574043609358}
   - component: {fileID: 3553686572906552720}
   - component: {fileID: 3553686572906552727}
-  - component: {fileID: 3553686572906552726}
   - component: {fileID: 3524790827291926206}
   - component: {fileID: 8468865107040523140}
-  m_Layer: 11
-  m_Name: GoblinEnemy
+  - component: {fileID: 1604936865995050745}
+  m_Layer: 10
+  m_Name: GoblinRangedEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2405,25 +2406,6 @@ CapsuleCollider:
   m_Height: 3.25
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}
---- !u!114 &3553686572906552726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3553686574034208104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ce11a142c2da5449b14c98f0a620447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  moveSpeed: 5
-  minDistance: 3
-  meleeType: 1
-  weaponType: 12
-  swingSFX: {fileID: 8300000, guid: 3183bf15766f5bb4fae79bdcec51e4d2, type: 3}
-  attackAnimationLength: 1.167
 --- !u!114 &3524790827291926206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2451,6 +2433,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 2
   hitSFX: {fileID: 8300000, guid: f7fb73e4f32e67449a726ca11284d52d, type: 3}
+--- !u!114 &1604936865995050745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553686574034208104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0850a676a2e8d2f4c805398ffecda978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moveSpeed: 5
+  minDistance: 7
+  meleeType: 0
+  weaponType: 0
+  swingSFX: {fileID: 0}
+  attackAnimationLength: 3
+  shootSFX: {fileID: 8300000, guid: 0cf944a30a4dba848af08664fc17aacb, type: 3}
+  arrowInHand: {fileID: 1729771126950848397}
+  arrowProjectilePrefab: {fileID: 1281142225952640949, guid: 03ba24cf32f510546a7cf5a23366793e, type: 3}
+  arrowSpeed: 30
+  arrowReleaseTime: 0.35
 --- !u!1 &3553686574034211866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,7 +2466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034507996}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Foot_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2493,7 +2499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034502818}
   - component: {fileID: 3553686574039470114}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Undead_Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2600,7 +2606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034492290}
   - component: {fileID: 3553686574039369730}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Elf_Assassin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,7 +2713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034576698}
   - component: {fileID: 3553686574039496656}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_Heavy_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2813,7 +2819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034561456}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: LowerLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2846,7 +2852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034474278}
   - component: {fileID: 3553686574039390774}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_GoblinKing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2953,7 +2959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034482892}
   - component: {fileID: 3553686574039469278}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Elf_King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3060,7 +3066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034467844}
   - component: {fileID: 3553686574039479898}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_TinMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3166,7 +3172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034511920}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Forearm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,7 +3205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034560518}
   - component: {fileID: 3553686574039372592}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Undead_King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3306,7 +3312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034577534}
   - component: {fileID: 3553686574039416986}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_Templar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3413,7 +3419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034557790}
   - component: {fileID: 3553686574039400766}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3520,7 +3526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034577928}
   - component: {fileID: 3553686574039446458}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_GoblinWitchDoctor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3627,7 +3633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034479664}
   - component: {fileID: 3553686574039425110}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_GoblinWarrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3733,7 +3739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034487256}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Toe_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3765,7 +3771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034566416}
   - component: {fileID: 3553686574039424126}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3872,7 +3878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034571156}
   - component: {fileID: 3553686574039405852}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_GoblinFemale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3978,7 +3984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034553848}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: UpperLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4011,7 +4017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034561170}
   - component: {fileID: 3553686574039393420}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Doctor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4118,7 +4124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034570814}
   - component: {fileID: 3553686574039403222}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_ShieldMaiden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4224,7 +4230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034513554}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Forearm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4256,7 +4262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034565172}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Spine_jnt 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4288,7 +4294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034493400}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Hand_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4308,6 +4314,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5720900175062114552}
+  - {fileID: 1729771126951097393}
   m_Father: {fileID: 3553686574034511920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4321,7 +4328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034467990}
   - component: {fileID: 3553686574039422886}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_Heavy_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4428,7 +4435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034531318}
   - component: {fileID: 3553686574039387932}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4535,7 +4542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034457738}
   - component: {fileID: 3553686574039392698}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Undead_Heavy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4642,7 +4649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034473132}
   - component: {fileID: 3553686574039393946}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Princess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4748,7 +4755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034573892}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Shoulder_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4781,7 +4788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034470760}
   - component: {fileID: 3553686574039388962}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_Knight_Gladiator_Closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4888,7 +4895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553686574034453796}
   - component: {fileID: 3553686574039483158}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SF_Character_King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4994,7 +5001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034453632}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Chest_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5028,7 +5035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3553686574034568390}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Head_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5050,6 +5057,147 @@ Transform:
   m_Father: {fileID: 3553686574034516552}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1729771126950943803
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3553686574034493400}
+    m_Modifications:
+    - target: {fileID: 179126, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_Name
+      value: SF_Wep_Goblin_Arrow_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 179126, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 179126, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.981
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071064
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -9.529122e-22
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1.2705491e-21
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710725
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+--- !u!1 &1729771126950848397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 179126, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+  m_PrefabInstance: {fileID: 1729771126950943803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1729771126951097393 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 452618, guid: 0dfa536d6cfb73a43ae8dca44fd8c29b, type: 3}
+  m_PrefabInstance: {fileID: 1729771126950943803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1884911487188155735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3553686574034496808}
+    m_Modifications:
+    - target: {fileID: 185406, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_Name
+      value: SF_Wep_Goblin_Bow_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 185406, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.084
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.413
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710725
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071064
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1.2344711e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1.2667673e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+--- !u!4 &1884911487187790733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 431834, guid: 36bfaaca8bcf5344d87df63abbd43cb7, type: 3}
+  m_PrefabInstance: {fileID: 1884911487188155735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5720900175062063752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5063,7 +5211,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188800, guid: 706eacc0c4407e34e96b9e135899a17b, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 188800, guid: 706eacc0c4407e34e96b9e135899a17b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 188800, guid: 706eacc0c4407e34e96b9e135899a17b, type: 3}
       propertyPath: m_TagString

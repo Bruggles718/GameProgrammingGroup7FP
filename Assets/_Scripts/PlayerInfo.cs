@@ -19,7 +19,7 @@ public static class PlayerInfo
     
     private static int startingMaxHealth = 100;
     
-    private static float startingMaxStamina;
+    private static float startingMaxStamina = 100;
     
     public static void OverwriteStartingValues()
     {
