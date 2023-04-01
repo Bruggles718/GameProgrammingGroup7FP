@@ -18,6 +18,7 @@ public class MaxStaminaPickup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        staminaSlider = FindObjectOfType<StaminaManager>().staminaBar;
         _currentMaxStamina = PlayerInfo.maxStamina;
         _staminaTransform = staminaSlider.GetComponent<RectTransform>();
         _originalStaminaSize = _staminaTransform.sizeDelta;

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5596303463302821076}
   - component: {fileID: 5586468150385964246}
   - component: {fileID: 5607558943349822986}
-  - component: {fileID: 5607558943349822984}
-  - component: {fileID: 5607558943349822985}
+  - component: {fileID: 2724683189338889952}
+  - component: {fileID: 1711344424649142166}
   m_Layer: 0
   m_Name: Speed_Pickup
   m_TagString: Untagged
@@ -99,7 +99,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33849102, y: 0.49310842, z: 0.041323014}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5607558943349822984
+--- !u!114 &2724683189338889952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,22 +108,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 5608307132650801380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2312722e19bb477dbbb9550d454e86f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
---- !u!114 &5607558943349822985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5608307132650801380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81af624f5080c40c38f8af8e67679679, type: 3}
+  m_Script: {fileID: 11500000, guid: 24c9fb9d4594f8d438c757b9701d0bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   amountGain: 10
-  maxStaminaSfx: {fileID: 8300000, guid: f3df1fede518f432ba8cdd9fd2958160, type: 3}
+  maxStaminaSfx: {fileID: 0}
   staminaSlider: {fileID: 0}
+--- !u!114 &1711344424649142166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5608307132650801380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb54117b3eaa6942b9c988566a4e748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
