@@ -45,6 +45,7 @@ public class MaxStaminaPickup : MonoBehaviour
             _staminaTransform.sizeDelta = new Vector2(xValue, _staminaTransform.sizeDelta.y);
             staminaSlider.maxValue = PlayerInfo.maxStamina;
             staminaSlider.value = PlayerInfo.maxStamina;
+            AudioSource.PlayClipAtPoint(maxStaminaSfx, transform.position);
             Destroy(gameObject);
         }
     }
