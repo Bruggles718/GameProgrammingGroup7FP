@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
             AudioSource.PlayClipAtPoint(hitSFX, this.transform.position);
         }  
         
-        if (_currentHealth == 0) {
+        if (_currentHealth <= 0) {
             PlayerDies();
         }
 

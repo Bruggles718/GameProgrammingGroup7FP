@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1281142225951624131}
   - component: {fileID: 1281142225950956785}
   - component: {fileID: 1281142225952770220}
-  - component: {fileID: 1281142225952770219}
   - component: {fileID: 1840194042119842622}
+  - component: {fileID: 3731187607152574027}
   m_Layer: 6
   m_Name: ArrowProjectile
   m_TagString: PlayerWeapon
@@ -102,19 +102,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1281142225952770219
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281142225952640949}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.23552766, y: 1.9627703, z: 0.10804372}
-  m_Center: {x: -0.0000004812753, y: 0.9813842, z: -8.0189e-22}
 --- !u!114 &1840194042119842622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +115,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+--- !u!65 &3731187607152574027
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281142225952640949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23552766, y: 1.9627703, z: 0.10804372}
+  m_Center: {x: -0.0000004812753, y: 0.9813842, z: -8.0189e-22}

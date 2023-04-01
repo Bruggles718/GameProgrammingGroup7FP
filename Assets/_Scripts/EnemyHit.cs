@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHit : MonoBehaviour
 {
-    [SerializeField] private int damageAmount;
+    [SerializeField] public int damageAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +24,16 @@ public class EnemyHit : MonoBehaviour
         {
             Debug.Log("Hit player for " + this.damageAmount.ToString() + " damage");
             collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(this.damageAmount);
+        }
+    }
+    
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (LevelManager.isGameOver) return;
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Hit player for " + this.damageAmount.ToString() + " damage");
+            collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(this.damageAmount);
         }
     }
 }

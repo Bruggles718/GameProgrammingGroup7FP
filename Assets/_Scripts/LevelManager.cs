@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    public bool bossRoom = false;
+    public GameObject boss;
     public Text timer;
     public Text gameText;
     public static bool isGameOver;
@@ -41,6 +43,13 @@ public class LevelManager : MonoBehaviour
             scoreText.text = score.ToString();
             currentTime += Time.deltaTime; 
             SetTimerText();
+            if (bossRoom)
+            {
+                if (boss.GetComponent<BossHealthBarController>().healthSlider.value <= 0)
+                {
+                    LevelBeat();
+                }
+            }
             /*
              This is where we set condition for next level
             if ()

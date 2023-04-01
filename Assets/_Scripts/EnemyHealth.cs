@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public int startingHealth = 5;
     //public AudioClip deadSFX;
     public AudioClip hitSFX;
-    int currentHealth;
+    public int currentHealth;
 
 
     void Start()
@@ -44,7 +44,15 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log("Enemy dies");
         //AudioSource.PlayClipAtPoint(deadSFX, transform.position);
         //Destroy(gameObject);
-        this.GetComponent<EnemyBehavior>().Die();
+        var eb = this.GetComponent<EnemyBehavior>();
+        if (eb)
+        {
+            eb.Die();
+        }
+        else
+        {
+            
+        }
         this.GetComponent<Animator>().SetBool("Death_b", true);
         FindObjectOfType<LevelManager>().AddScore(1);
         Destroy(gameObject, 2);

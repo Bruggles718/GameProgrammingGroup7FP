@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
+    public bool disappearOnPickup = true;
     public KeyCode pickupKey;
 
     public PlayerBehavior playerBehavior;
@@ -27,7 +28,7 @@ public class WeaponPickup : MonoBehaviour
             playerBehavior.SetWeapon(weaponName);
             // playerBehavior.SetDamageType("");
             doPickup = false;
-            Destroy(gameObject);
+            if (disappearOnPickup) Destroy(gameObject);
         }
     }
 
