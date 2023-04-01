@@ -589,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5547105865400633640, guid: 3f7ae762129d987419cc14c679f0706d, type: 3}
       propertyPath: nextLevel
-      value: 
+      value: BossArena
       objectReference: {fileID: 0}
     - target: {fileID: 5547105865784387114, guid: 3f7ae762129d987419cc14c679f0706d, type: 3}
       propertyPath: m_AnchorMax.x
