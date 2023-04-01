@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383d7205b2659c344b9582445d80c878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountGain: 10
+  amountGain: 50
   player: {fileID: 0}
   maxHealthSfx: {fileID: 8300000, guid: 2527c12cfa3174ae0b4fe20c7d489b40, type: 3}
 --- !u!114 &5038107371542679519

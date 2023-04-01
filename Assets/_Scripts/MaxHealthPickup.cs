@@ -12,7 +12,7 @@ public class MaxHealthPickup : MonoBehaviour
     private PlayerHealth _playerHealth;
     private void Start()
     {
-        _playerHealth = player.GetComponent<PlayerHealth>();
+        _playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
     private void OnTriggerEnter(Collider other)

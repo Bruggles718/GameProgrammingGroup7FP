@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c9fb9d4594f8d438c757b9701d0bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountGain: 10
+  amountGain: 50
   maxStaminaSfx: {fileID: 8300000, guid: f3df1fede518f432ba8cdd9fd2958160, type: 3}
   staminaSlider: {fileID: 0}
 --- !u!114 &1711344424649142166

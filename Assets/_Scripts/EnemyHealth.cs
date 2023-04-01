@@ -48,6 +48,7 @@ public class EnemyHealth : MonoBehaviour
         if (eb)
         {
             eb.Die();
+            Destroy(gameObject, 2);
         }
         else
         {
@@ -55,7 +56,6 @@ public class EnemyHealth : MonoBehaviour
         }
         this.GetComponent<Animator>().SetBool("Death_b", true);
         FindObjectOfType<LevelManager>().AddScore(1);
-        Destroy(gameObject, 2);
     }
 
  
