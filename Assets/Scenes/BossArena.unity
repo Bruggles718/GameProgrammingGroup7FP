@@ -3830,6 +3830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a7df6acd97d2740b6f60acd10fa687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSFX: {fileID: 8300000, guid: eb92b0d79baad9f4e88eaad268a42187, type: 3}
   deathEffect: {fileID: 0}
   currentState: 0
   enemySpeed: 10

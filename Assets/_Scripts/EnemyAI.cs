@@ -14,6 +14,8 @@ public class EnemyAI : MonoBehaviour
         Dead
     }
     
+    public AudioClip attackSFX;
+    
     public GameObject deathEffect;
 
     public FSMStates currentState;
@@ -233,6 +235,11 @@ public class EnemyAI : MonoBehaviour
     private void DoAttack()
     {
         agent.speed = enemySpeed * 3f;
+        AudioSource.PlayClipAtPoint(this.attackSFX, this.transform.position);
+        AudioSource.PlayClipAtPoint(this.attackSFX, this.transform.position);
+        AudioSource.PlayClipAtPoint(this.attackSFX, this.transform.position);
+        AudioSource.PlayClipAtPoint(this.attackSFX, this.transform.position);
+        AudioSource.PlayClipAtPoint(this.attackSFX, this.transform.position);
     }
 
     private void OnDrawGizmos()
