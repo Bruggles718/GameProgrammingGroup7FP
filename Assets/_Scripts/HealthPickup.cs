@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    public int healthAmount = 5; 
+    public int healthAmount = 5;
+    public AudioClip healthSFX1;
+    public AudioClip healthSFX2;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,9 @@ public class HealthPickup : MonoBehaviour
 
             var playerHealth = other.GetComponent<PlayerHealth>();
             playerHealth.TakeHealth(healthAmount);
-
+            
+            AudioSource.PlayClipAtPoint(healthSFX1, this.transform.position);
+            AudioSource.PlayClipAtPoint(healthSFX2, this.transform.position);
 
             Destroy(gameObject, 0.5f);
         }
