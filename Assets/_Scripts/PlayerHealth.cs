@@ -24,11 +24,17 @@ public class PlayerHealth : MonoBehaviour
         //_currentHealth = startingHealth;
         _currentHealth = PlayerInfo.currentHealth;
         _currentMaxHealth = PlayerInfo.maxHealth;
+        print(_currentHealth);
+        print(_currentMaxHealth);
+        healthSlider.maxValue = PlayerInfo.maxHealth;
         healthSlider.value = _currentHealth;
         _originalBoxSize = healthSlider.GetComponent<RectTransform>().sizeDelta;
         _originalMaxHealth = 100;
         _healthSliderTransform = healthSlider.GetComponent<RectTransform>();
-        ChangeCurrentMaxHealth(_currentMaxHealth - _originalMaxHealth);
+        float newXPos = _healthSliderTransform.sizeDelta.x 
+                         + (float)(_currentMaxHealth - _originalMaxHealth) / _originalMaxHealth * _originalBoxSize.x;
+         float xValue = Mathf.Clamp(newXPos, _originalBoxSize.x, _originalBoxSize.x * 3);
+         _healthSliderTransform.sizeDelta = new Vector2(xValue, _healthSliderTransform.sizeDelta.y);
         _currentHealth = PlayerInfo.currentHealth;
         healthSlider.value = _currentHealth;
     }
