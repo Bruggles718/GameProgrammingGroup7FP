@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    public bool showGizmos = true;
     public enum FSMStates
     {
         Idle,
@@ -244,6 +245,7 @@ public class EnemyAI : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (!showGizmos) return;
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position,attackDistance);
 
