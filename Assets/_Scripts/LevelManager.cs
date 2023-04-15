@@ -87,6 +87,13 @@ public class LevelManager : MonoBehaviour
             Invoke("LoadNextLevel", 2);
             score = 0;
         }
+        if (bossRoom)
+        {
+            PlayerInfo.weaponType = "sword";
+            PlayerInfo.maxHealth = 100;
+            PlayerInfo.currentHealth = 100;
+            PlayerInfo.maxStamina = 100;
+        }
         PlayerInfo.OverwriteStartingValues();
     }
 

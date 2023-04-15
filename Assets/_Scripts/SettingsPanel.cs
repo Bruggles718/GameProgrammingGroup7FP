@@ -7,9 +7,18 @@ public class SettingsPanel : MonoBehaviour
 {
     public Slider slider;
 
-   void Update()
+    private void Start()
+    {
+        slider.value = PlayerPrefs.GetFloat("volume", 1);
+    }
+
+    void Update()
     {
         AudioListener.volume = slider.value;
-        
+    }
+
+    public void OnSliderValueChanged()
+    {
+        PlayerPrefs.SetFloat("volume", slider.value);
     }
 }
